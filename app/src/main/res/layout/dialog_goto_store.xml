@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llRoot"
+    android:background="@drawable/window_img"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/tvMessage"
+        android:gravity="center_horizontal"
+        android:layout_width="@dimen/x250"
+        android:layout_marginTop="@dimen/y20"
+        android:layout_height="wrap_content"
+        tools:text="尚未建设鸡舍,赶紧去商店看看吧!"
+        android:textColor="@color/color_7b492a"
+        android:textSize="@dimen/x28" />
+
+    <TextView
+        android:id="@+id/tvGoToStore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/y30"
+        android:background="@drawable/button_bg"
+        android:gravity="center"
+        android:text="前去商店"
+        android:textColor="@color/color_fff"
+        android:textSize="@dimen/x22" />
+
+</LinearLayout>
