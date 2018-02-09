@@ -1,15 +1,19 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/llRoot"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_img"
     tools:context="com.flowerbell.gejigeji.modules.main.fragment.FarmFragment">
 
+
+    <com.flowerbell.gejigeji.widget.FarmView
+        android:id="@+id/farmView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
     <com.flowerbell.gejigeji.widget.FarmTitle
         android:id="@+id/farmTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
 
-</LinearLayout>
+</RelativeLayout>

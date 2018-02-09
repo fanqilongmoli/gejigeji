@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rlRoot"
+    android:background="@drawable/bg_img">
+
+    <ImageView
+        android:id="@+id/ivEgg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/y630"
+        android:layout_marginRight="@dimen/x90"
+        android:src="@drawable/egg_ic" />
+
+    <ImageView
+        android:id="@+id/ivChicken"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/y120"
+        android:layout_marginLeft="@dimen/x90"
+        android:src="@drawable/chicken_ic" />
+
+    <ImageView
+        android:id="@+id/ivFood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/y120"
+        android:layout_marginRight="@dimen/x70"
+        android:src="@drawable/food_ic" />
+</RelativeLayout>

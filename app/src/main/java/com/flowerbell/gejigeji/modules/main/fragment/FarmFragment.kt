@@ -24,7 +24,7 @@ class FarmFragment : BaseFragment() {
     }
 
     override fun initView() {
-        noBuildChickenRoom()
+        noChicken()
 
         farmTitle.setFarmTitleListener(object :FarmTitle.FarmTitleListener{
             override fun messageClick() {
@@ -51,7 +51,7 @@ class FarmFragment : BaseFragment() {
     override fun onHiddenChanged(hidden: Boolean) {
         super.onHiddenChanged(hidden)
         if (!hidden)
-            noBuildChickenRoom()
+            hasChicken()
     }
 
 
@@ -59,8 +59,8 @@ class FarmFragment : BaseFragment() {
      * 没有建鸡舍
      */
     private fun noBuildChickenRoom() {
-        llRoot.setBackgroundResource(R.drawable.none_bg)
         farmTitle.noBuildChickenRoom()
+        farmView.noBuildChickenRoom()
         val goToStoreDialog = GoToStoreDialog(context)
         goToStoreDialog.setMessage("尚未建设鸡舍,赶紧去商店看看吧!")
         goToStoreDialog.setGoToStoreDialogListener(object : GoToStoreDialog.GoToStoreDialogListener {
@@ -76,8 +76,8 @@ class FarmFragment : BaseFragment() {
      * 没有小鸡
      */
     private fun noChicken() {
-        llRoot.setBackgroundResource(R.drawable.bg_img)
         farmTitle.noChicken()
+        farmView.noChicken()
         val goToStoreDialog = GoToStoreDialog(context)
         goToStoreDialog.setMessage("鸡舍中没有小鸡入住呢,赶紧去商店看看吧!")
         goToStoreDialog.setGoToStoreDialogListener(object : GoToStoreDialog.GoToStoreDialogListener {
@@ -90,8 +90,7 @@ class FarmFragment : BaseFragment() {
     }
 
     private fun hasChicken(){
-        llRoot.setBackgroundResource(R.drawable.bg_img)
-
+        farmView.noEgg()
     }
 
 }
