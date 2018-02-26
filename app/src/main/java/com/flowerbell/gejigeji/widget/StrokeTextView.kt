@@ -21,17 +21,19 @@ import java.lang.reflect.Field
 class StrokeTextView @JvmOverloads constructor(private val mContext: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : android.support.v7.widget.AppCompatTextView(mContext, attrs, defStyleAttr) {
 
     //private var mTextPaint: TextPaint
-    private var mInnerColor :Int
-    private var mOuterColor :Int
-    private var mHasBorder:Boolean
+    private var mInnerColor: Int
+    private var mOuterColor: Int
+    private var mHasBorder: Boolean
     private var outlineTextView: TextView? = null
+    private var mStrokeWidth: Float
 
     init {
 
         val array = mContext.obtainStyledAttributes(attrs, R.styleable.StrokeTextView)
-        mHasBorder = array.getBoolean(R.styleable.StrokeTextView_StrokeTextViewHasBorder,false)
-        mInnerColor = array.getColor(R.styleable.StrokeTextView_StrokeTextViewInnerColor,mContext.resources.getColor(R.color.color_fff))
-        mOuterColor = array.getColor(R.styleable.StrokeTextView_StrokeTextViewOuterColor,mContext.resources.getColor(R.color.color_7b492a))
+        mHasBorder = array.getBoolean(R.styleable.StrokeTextView_StrokeTextViewHasBorder, false)
+        mInnerColor = array.getColor(R.styleable.StrokeTextView_StrokeTextViewInnerColor, mContext.resources.getColor(R.color.color_fff))
+        mOuterColor = array.getColor(R.styleable.StrokeTextView_StrokeTextViewOuterColor, mContext.resources.getColor(R.color.color_7b492a))
+        mStrokeWidth = array.getDimension(R.styleable.StrokeTextView_StrokeTextViewStroke, 4f)
         array.recycle()
         outlineTextView = TextView(mContext, attrs)
 
@@ -41,9 +43,9 @@ class StrokeTextView @JvmOverloads constructor(private val mContext: Context, at
     private fun initView() {
         setTextColor(mInnerColor)
         val paint = outlineTextView!!.paint
-        paint.strokeWidth = 4f// 描边宽度
+        paint.strokeWidth = mStrokeWidth// 描边宽度
         paint.style = Paint.Style.STROKE
-        if (mHasBorder){
+        if (mHasBorder) {
             outlineTextView!!.typeface = Typeface.createFromAsset(mContext.assets, "hylxjt.ttf")
             outlineTextView!!.setTextColor(mOuterColor)// 描边颜色
             outlineTextView!!.gravity = gravity
@@ -53,7 +55,7 @@ class StrokeTextView @JvmOverloads constructor(private val mContext: Context, at
 
     override fun setLayoutParams(params: ViewGroup.LayoutParams) {
         super.setLayoutParams(params)
-        if (mHasBorder){
+        if (mHasBorder) {
             outlineTextView!!.layoutParams = params
         }
     }
@@ -62,7 +64,7 @@ class StrokeTextView @JvmOverloads constructor(private val mContext: Context, at
         super.onMeasure(widthMeasureSpec, heightMeasureSpec)
 
         // 设置轮廓文字
-        if (mHasBorder){
+        if (mHasBorder) {
             val outlineText = outlineTextView?.text
             if (outlineText == null || outlineText != this.text) {
                 outlineTextView?.text = text
@@ -75,7 +77,7 @@ class StrokeTextView @JvmOverloads constructor(private val mContext: Context, at
 
     override fun onLayout(changed: Boolean, left: Int, top: Int, right: Int, bottom: Int) {
         super.onLayout(changed, left, top, right, bottom)
-        if (mHasBorder){
+        if (mHasBorder) {
             outlineTextView!!.layout(left, top, right, bottom)
         }
     }
@@ -83,13 +85,13 @@ class StrokeTextView @JvmOverloads constructor(private val mContext: Context, at
     override fun onDraw(canvas: Canvas) {
         //倾斜度45,上下左右居中
         //canvas.rotate(0, getMeasuredWidth(), getMeasuredHeight());
-        if (mHasBorder){
+        if (mHasBorder) {
             outlineTextView!!.draw(canvas)
         }
         super.onDraw(canvas)
     }
 
-    fun setInnerOuterColor(innerColor: Int,outerColor: Int,hasBorder:Boolean){
+    fun setInnerOuterColor(innerColor: Int, outerColor: Int, hasBorder: Boolean) {
         mInnerColor = innerColor
         mOuterColor = outerColor
         mHasBorder = hasBorder

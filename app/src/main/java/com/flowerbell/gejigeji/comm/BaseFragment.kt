@@ -42,5 +42,9 @@ abstract class BaseFragment: Fragment() {
      */
     abstract fun initView()
 
+    fun getFragmentTitle(): String {
+        return "No title"
+    }
+
 
 }

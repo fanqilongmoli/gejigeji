@@ -4,5 +4,6 @@
         <attr name="StrokeTextViewHasBorder" format="boolean"/>
         <attr name="StrokeTextViewInnerColor" format="color"/>
         <attr name="StrokeTextViewOuterColor" format="color"/>
+        <attr name="StrokeTextViewStroke" format="dimension"/>
     </declare-styleable>
 </resources>

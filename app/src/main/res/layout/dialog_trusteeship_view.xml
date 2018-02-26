@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/window_img"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/x24"
+        android:textColor="@color/color_7b492a"
+        android:text="托管提示"/>
+
+    <android.support.v7.widget.AppCompatCheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:theme="@style/MyCheckBox"
+        android:checked="true"
+        android:gravity="left"
+        android:text="自动喂食"
+        android:paddingTop="@dimen/y10"
+        android:textSize="@dimen/x30"
+        android:textColor="@color/color_7b492a"/>
+    <android.support.v7.widget.AppCompatCheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:theme="@style/MyCheckBox"
+        android:checked="true"
+        android:gravity="left"
+        android:text="自动收蛋"
+        android:textSize="@dimen/x30"
+        android:paddingTop="@dimen/y10"
+        android:textColor="@color/color_7b492a"/>
+    <android.support.v7.widget.AppCompatCheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:theme="@style/MyCheckBox"
+        android:checked="true"
+        android:gravity="left"
+        android:textSize="@dimen/x30"
+        android:text="自动购买饲料(以目前的咯叽币余额为限,采购最近一次交易的饲料)"
+        android:paddingTop="@dimen/y10"
+        android:textColor="@color/color_7b492a"/>
+    <android.support.v7.widget.AppCompatCheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:theme="@style/MyCheckBox"
+        android:checked="true"
+        android:gravity="left"
+        android:textSize="@dimen/x30"
+        android:text="自动购买饲料(以目前的咯叽币余额为限,采购最近一次交易的饲料)"
+        android:paddingTop="@dimen/y10"
+        android:textColor="@color/color_7b492a"/>
+</LinearLayout>
