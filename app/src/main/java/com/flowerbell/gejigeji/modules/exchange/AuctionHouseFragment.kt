@@ -12,6 +12,7 @@ import com.flowerbell.gejigeji.modules.exchange.adapter.AuctionAdapter
 import com.flowerbell.gejigeji.modules.exchange.adapter.BuyAdapter
 import com.flowerbell.gejigeji.modules.main.fragment.ExchangeFragment
 import com.flowerbell.gejigeji.widget.dialog.RecoveryDialog
+import com.flowerbell.gejigeji.widget.dialog.ShangJiaDialog
 import kotlinx.android.synthetic.main.fragment_auction_house.*
 
 
@@ -80,6 +81,8 @@ class AuctionHouseFragment : BaseFragment(), View.OnClickListener {
             }
             R.id.tv_shangjia->{
                 //上架
+                val shangJiaDialog = ShangJiaDialog(context)
+                shangJiaDialog.show()
             }
             R.id.tv_huishou->{
                 //回收

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/llRoot"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/window_img"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/x30"
+        android:textColor="@color/color_7b492a"
+        android:text="商品上架"/>
+    <View
+        android:layout_marginTop="@dimen/y20"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#bb9977"/>
+    <RelativeLayout
+        android:layout_marginTop="@dimen/y20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="@dimen/x30"
+                android:textColor="@color/color_7b492a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="鸡蛋1(共20枚)"/>
+            <TextView
+                android:textSize="@dimen/x30"
+                android:textColor="@color/color_7b492a"
+                android:layout_marginTop="@dimen/y30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="拍卖量 12"/>
+        </LinearLayout>
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/auction_egg_ic"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/x30"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textSize="@dimen/x30"
+            android:textColor="@color/color_7b492a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="拍卖单价"/>
+        <TextView
+            android:textSize="@dimen/x30"
+            android:textColor="@color/color_7b492a"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:text="3.00 元"/>
+        <TextView
+            android:id="@+id/tv_huishou"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="拍卖"
+            android:gravity="center"
+            android:textColor="@color/color_fff"
+            android:background="@drawable/button_bg"/>
+    </LinearLayout>
+    <View
+        android:layout_marginTop="@dimen/y20"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#bb9977"/>
+    <TextView
+        android:layout_marginTop="@dimen/y20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="你的商品"
+        android:textSize="@dimen/x30"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/color_7b492a"/>
+    <View
+        android:layout_marginTop="@dimen/y20"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#bb9977"/>
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/y20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/auction_egg_ic"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="鸡蛋1"
+                android:layout_marginTop="@dimen/y10"
+                android:textColor="@color/color_7b492a"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
