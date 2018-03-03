@@ -27,7 +27,7 @@
         android:layout_height="@dimen/x150"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="@dimen/y60"
-        android:src="@mipmap/ic_launcher" />
+        android:src="@drawable/head_ic" />
 
     <com.flowerbell.gejigeji.widget.StrokeTextView
         android:layout_width="wrap_content"

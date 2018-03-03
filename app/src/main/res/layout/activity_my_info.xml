@@ -25,7 +25,7 @@
         android:layout_height="@dimen/x150"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="@dimen/y60"
-        android:src="@mipmap/ic_launcher" />
+        android:src="@drawable/head_ic" />
 
     <com.flowerbell.gejigeji.widget.StrokeTextView
         android:layout_width="wrap_content"
@@ -60,6 +60,13 @@
             android:paddingRight="@dimen/x76"
             android:layout_marginLeft="@dimen/x30"
             android:text="张晓雅"/>
+        <ImageView
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x30"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/into_ic"/>
     </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
@@ -83,6 +90,13 @@
             android:paddingRight="@dimen/x76"
             android:layout_marginLeft="@dimen/x30"
             android:text="女"/>
+        <ImageView
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x30"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/into_ic"/>
     </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
@@ -106,6 +120,13 @@
             android:paddingRight="@dimen/x76"
             android:layout_marginLeft="@dimen/x30"
             android:text="1993-01-01"/>
+        <ImageView
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x30"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/into_ic"/>
     </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
@@ -129,6 +150,13 @@
             android:paddingRight="@dimen/x76"
             android:layout_marginLeft="@dimen/x30"
             android:text="又是开心的一天"/>
+        <ImageView
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x30"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/into_ic"/>
     </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
@@ -143,6 +171,13 @@
             android:textColor="@color/color_7b492a"
             android:layout_marginLeft="@dimen/x30"
             android:text="修改密码"/>
+        <ImageView
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x30"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/into_ic"/>
 
     </RelativeLayout>
 

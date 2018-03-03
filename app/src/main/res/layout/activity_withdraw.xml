@@ -1,9 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/none_bg"
     tools:context="com.flowerbell.gejigeji.modules.my.WithdrawActivity">
+    <com.flowerbell.gejigeji.widget.StrokeTextView
+        android:id="@+id/tv_store"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/y70"
+        android:fontFamily="@font/hylxjt"
+        android:text="提现"
+        android:textSize="@dimen/x32"
+        app:StrokeTextViewHasBorder="true"
+        app:StrokeTextViewInnerColor="@color/color_fdd329"
+        app:StrokeTextViewOuterColor="@color/color_7b492a"
+        app:StrokeTextViewStroke="8px" />
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y527"
+        android:layout_marginLeft="@dimen/x50"
+        android:layout_marginRight="@dimen/x50"
+        android:layout_marginTop="@dimen/y70"
+        android:background="@drawable/shape_border_comm"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/tv_wallet"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y140"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x30"
+                android:layout_marginTop="@dimen/y30"
+                android:fontFamily="@font/hylxjt"
+                android:text="支付账户"
+                android:textColor="@color/color_7b492a" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x60"
+                android:layout_marginTop="@dimen/y30"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/hylxjt"
+                    android:text="招商银行(1123123)"
+                    android:textColor="@color/color_7b492a" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/y20"
+                    android:fontFamily="@font/hylxjt"
+                    android:text="更换提现银行卡"
+                    android:textColor="@color/color_fdd329"
+                    android:textSize="@dimen/x22" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4px"
+            android:layout_marginLeft="4px"
+            android:layout_marginRight="4px"
+            android:background="#b39c7a" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x30"
+                android:layout_marginTop="@dimen/y30"
+                android:fontFamily="@font/hylxjt"
+                android:text="提现金额"
+                android:textColor="@color/color_7b492a" />
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/y40"
+                android:layout_marginLeft="@dimen/x30"
+                android:layout_marginRight="@dimen/x30"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="@color/color_7b492a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/hylxjt"
+                    android:textSize="@dimen/x40"
+                    android:text="￥"/>
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:layout_height="@dimen/y70" />
+            </LinearLayout>
+            <View
+                android:layout_marginLeft="@dimen/x30"
+                android:layout_marginRight="@dimen/x30"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#bda494"/>
+
+            <TextView
+                android:textColor="@color/color_fff"
+                android:textSize="@dimen/x32"
+                android:layout_marginTop="@dimen/y50"
+                android:layout_marginLeft="@dimen/x30"
+                android:layout_marginRight="@dimen/x30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:background="@drawable/next_btn_bg"
+                android:text="确认提现"/>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+</LinearLayout>

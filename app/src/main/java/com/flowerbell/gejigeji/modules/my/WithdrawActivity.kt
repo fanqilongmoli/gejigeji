@@ -1,7 +1,5 @@
 package com.flowerbell.gejigeji.modules.my
 
-import android.support.v7.app.AppCompatActivity
-import android.os.Bundle
 import com.chuangxincheng.commlibrary.sys.StatusBarUtil
 import com.flowerbell.gejigeji.R
 import com.flowerbell.gejigeji.comm.BaseActivity
