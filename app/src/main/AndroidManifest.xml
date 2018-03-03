@@ -19,7 +19,8 @@
         <activity android:name=".modules.my.MyInfoActivity" />
         <activity android:name=".modules.my.MyWalletActivity" />
         <activity android:name=".modules.my.RechargeActivity" />
-        <activity android:name=".modules.my.WithdrawActivity"></activity>
+        <activity android:name=".modules.my.WithdrawActivity" />
+        <activity android:name=".modules.my.AddressManageActivity"></activity>
     </application>
 
 </manifest>

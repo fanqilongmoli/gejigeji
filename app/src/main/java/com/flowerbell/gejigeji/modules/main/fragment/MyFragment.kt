@@ -1,14 +1,12 @@
 package com.flowerbell.gejigeji.modules.main.fragment
 
 import android.content.Intent
+import android.location.Address
 import android.view.View
 import com.chuangxincheng.commlibrary.app.ActivityDelegate
 import com.flowerbell.gejigeji.R
 import com.flowerbell.gejigeji.comm.BaseFragment
-import com.flowerbell.gejigeji.modules.my.MyInfoActivity
-import com.flowerbell.gejigeji.modules.my.MyWalletActivity
-import com.flowerbell.gejigeji.modules.my.RechargeActivity
-import com.flowerbell.gejigeji.modules.my.WithdrawActivity
+import com.flowerbell.gejigeji.modules.my.*
 import kotlinx.android.synthetic.main.fragment_my.*
 
 
@@ -32,6 +30,7 @@ class MyFragment : BaseFragment(), View.OnClickListener {
         tv_wallet.setOnClickListener(this)
         tv_recharge.setOnClickListener(this)
         tv_withdraw.setOnClickListener(this)
+        rl_address.setOnClickListener(this)
     }
 
 
@@ -53,6 +52,10 @@ class MyFragment : BaseFragment(), View.OnClickListener {
             R.id.tv_withdraw->{
                 //提现
                 ActivityDelegate.create(WithdrawActivity::class.java).open(context)
+            }
+            R.id.rl_address->{
+                //地址管理
+                ActivityDelegate.create(AddressManageActivity::class.java).open(context)
             }
         }
     }
