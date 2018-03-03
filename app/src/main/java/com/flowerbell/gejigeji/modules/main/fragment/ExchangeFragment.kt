@@ -42,22 +42,24 @@ class ExchangeFragment : BaseFragment(), View.OnClickListener {
     override fun onClick(v: View?) {
         when (v!!.id) {
             R.id.ll_auction_house -> {
-                ToastUtil.showShort(context, "点击交易所")
                 tv_store.setInnerOuterColor(resources.getColor(R.color.color_ffefae), resources.getColor(R.color.color_7b492a), true)
                 tv_store_line.setInnerOuterColor(resources.getColor(R.color.color_ffefae), resources.getColor(R.color.color_7b492a), true)
 
                 tv_auction_house.setInnerOuterColor(resources.getColor(R.color.color_fdd329), resources.getColor(R.color.color_7b492a), true)
                 tv_auction_house_line.setInnerOuterColor(resources.getColor(R.color.color_fdd329), resources.getColor(R.color.color_7b492a), true)
 
+                noScrollViewPager.currentItem = 1
+
             }
             R.id.ll_store -> {
-                ToastUtil.showShort(context, "点击商店")
 
                 tv_store.setInnerOuterColor(resources.getColor(R.color.color_fdd329), resources.getColor(R.color.color_7b492a), true)
                 tv_store_line.setInnerOuterColor(resources.getColor(R.color.color_fdd329), resources.getColor(R.color.color_7b492a), true)
 
                 tv_auction_house.setInnerOuterColor(resources.getColor(R.color.color_ffefae), resources.getColor(R.color.color_7b492a), true)
                 tv_auction_house_line.setInnerOuterColor(resources.getColor(R.color.color_ffefae), resources.getColor(R.color.color_7b492a), true)
+
+                noScrollViewPager.currentItem = 0
             }
         }
     }

@@ -14,11 +14,6 @@ import com.flowerbell.gejigeji.modules.main.fragment.ExchangeFragment
  * 拍卖行
  */
 class AuctionHouseFragment : BaseFragment() {
-    companion object {
-        fun getInstance(): AuctionHouseFragment {
-            return AuctionHouseFragment()
-        }
-    }
 
     override fun getLayoutId(): Int {
         return R.layout.fragment_auction_house

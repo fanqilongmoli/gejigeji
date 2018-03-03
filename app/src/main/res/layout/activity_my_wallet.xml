@@ -1,12 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/none_bg"
     android:orientation="vertical"
-    tools:context="com.flowerbell.gejigeji.modules.main.fragment.MyFragment">
-
+    android:background="@drawable/none_bg"
+    tools:context="com.flowerbell.gejigeji.modules.my.MyWalletActivity">
     <com.flowerbell.gejigeji.widget.StrokeTextView
         android:id="@+id/tv_store"
         android:layout_width="wrap_content"
@@ -14,37 +14,18 @@
         android:layout_gravity="center"
         android:layout_marginTop="@dimen/y70"
         android:fontFamily="@font/hylxjt"
-        android:text="我的"
+        android:text="钱包"
         android:textSize="@dimen/x32"
         app:StrokeTextViewHasBorder="true"
         app:StrokeTextViewInnerColor="@color/color_fdd329"
         app:StrokeTextViewOuterColor="@color/color_7b492a"
         app:StrokeTextViewStroke="8px" />
-
-    <ImageView
-        android:id="@+id/iv_header"
-        android:layout_width="@dimen/x150"
-        android:layout_height="@dimen/x150"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="@dimen/y60"
-        android:src="@mipmap/ic_launcher" />
-
-    <com.flowerbell.gejigeji.widget.StrokeTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="@dimen/y8"
-        android:fontFamily="@font/hylxjt"
-        app:StrokeTextViewHasBorder="true"
-        android:text="张晓雅"
-        android:textSize="@dimen/x24" />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/y300"
         android:layout_marginLeft="@dimen/x50"
         android:layout_marginRight="@dimen/x50"
-        android:layout_marginTop="@dimen/y20"
+        android:layout_marginTop="@dimen/y70"
         android:orientation="vertical"
         android:background="@drawable/shape_border_comm">
         <TextView
@@ -95,46 +76,65 @@
         </LinearLayout>
 
     </LinearLayout>
+    <com.flowerbell.gejigeji.widget.StrokeTextView
+        android:layout_marginLeft="@dimen/x50"
+        android:textSize="@dimen/x32"
+        android:layout_width="wrap_content"
+        android:fontFamily="@font/hylxjt"
+        android:layout_height="wrap_content"
+        app:StrokeTextViewHasBorder="true"
+        android:layout_marginTop="@dimen/y20"
+        android:text="消费明细"/>
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/y100"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:layout_marginLeft="@dimen/x50"
         android:layout_marginRight="@dimen/x50"
         android:layout_marginTop="@dimen/y20"
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/y35"
         android:background="@drawable/shape_border_comm">
-        <com.flowerbell.gejigeji.widget.StrokeTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/hylxjt"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="@dimen/x30"
-            app:StrokeTextViewHasBorder="true"
-            app:StrokeTextViewInnerColor="@color/color_ffa800"
-            app:StrokeTextViewOuterColor="@color/color_7b492a"
-            app:StrokeTextViewStroke="8px"
-            android:text="地址管理"/>
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/y100"
-        android:layout_marginLeft="@dimen/x50"
-        android:layout_marginRight="@dimen/x50"
-        android:background="@drawable/shape_border_comm">
-        <com.flowerbell.gejigeji.widget.StrokeTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/hylxjt"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="@dimen/x30"
-            app:StrokeTextViewHasBorder="true"
-            app:StrokeTextViewInnerColor="@color/color_ffa800"
-            app:StrokeTextViewOuterColor="@color/color_7b492a"
-            app:StrokeTextViewStroke="8px"
-            android:text="设置"/>
-
-    </RelativeLayout>
-
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/y88"
+                android:gravity="center"
+                android:textSize="@dimen/x32"
+                android:fontFamily="@font/hylxjt"
+                android:textColor="@color/color_7b492a"
+                android:text="项目"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/y88"
+                android:gravity="center"
+                android:textSize="@dimen/x32"
+                android:fontFamily="@font/hylxjt"
+                android:textColor="@color/color_7b492a"
+                android:text="数量"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/y88"
+                android:gravity="center"
+                android:textSize="@dimen/x32"
+                android:fontFamily="@font/hylxjt"
+                android:textColor="@color/color_7b492a"
+                android:text="明细"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#bda494"/>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
 
 </LinearLayout>

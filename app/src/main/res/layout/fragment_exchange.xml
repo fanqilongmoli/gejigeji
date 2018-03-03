@@ -8,9 +8,9 @@
     tools:context="com.flowerbell.gejigeji.modules.main.fragment.ExchangeFragment">
 
     <LinearLayout
-        android:layout_marginTop="@dimen/y70"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/y70"
         android:orientation="horizontal"
         android:paddingLeft="@dimen/x120"
         android:paddingRight="@dimen/x120">
@@ -30,10 +30,10 @@
                 android:fontFamily="@font/hylxjt"
                 android:text="商店"
                 android:textSize="@dimen/x32"
-                app:StrokeTextViewStroke="8px"
                 app:StrokeTextViewHasBorder="true"
                 app:StrokeTextViewInnerColor="@color/color_fdd329"
-                app:StrokeTextViewOuterColor="@color/color_7b492a" />
+                app:StrokeTextViewOuterColor="@color/color_7b492a"
+                app:StrokeTextViewStroke="8px" />
 
             <com.flowerbell.gejigeji.widget.StrokeTextView
                 android:id="@+id/tv_store_line"
@@ -41,12 +41,12 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:fontFamily="@font/hylxjt"
-                app:StrokeTextViewStroke="8px"
                 android:text="一"
                 android:textSize="@dimen/x32"
                 app:StrokeTextViewHasBorder="true"
                 app:StrokeTextViewInnerColor="@color/color_fdd329"
-                app:StrokeTextViewOuterColor="@color/color_7b492a" />
+                app:StrokeTextViewOuterColor="@color/color_7b492a"
+                app:StrokeTextViewStroke="8px" />
         </LinearLayout>
 
         <LinearLayout
@@ -66,7 +66,8 @@
                 android:textSize="@dimen/x32"
                 app:StrokeTextViewHasBorder="true"
                 app:StrokeTextViewInnerColor="@color/color_ffefae"
-                app:StrokeTextViewOuterColor="@color/color_7b492a" />
+                app:StrokeTextViewOuterColor="@color/color_7b492a"
+                app:StrokeTextViewStroke="8px" />
 
             <com.flowerbell.gejigeji.widget.StrokeTextView
                 android:id="@+id/tv_auction_house_line"
@@ -78,12 +79,14 @@
                 android:textSize="@dimen/x32"
                 app:StrokeTextViewHasBorder="true"
                 app:StrokeTextViewInnerColor="@color/color_ffefae"
-                app:StrokeTextViewOuterColor="@color/color_7b492a" />
+                app:StrokeTextViewOuterColor="@color/color_7b492a"
+                app:StrokeTextViewStroke="8px" />
         </LinearLayout>
     </LinearLayout>
+
     <com.chuangxincheng.commlibrary.widget.NoScrollViewPager
         android:id="@+id/noScrollViewPager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent" />
 
 </LinearLayout>
