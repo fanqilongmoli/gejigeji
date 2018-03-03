@@ -65,6 +65,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <com.flowerbell.gejigeji.widget.StrokeTextView
+                android:id="@+id/tv_recharge"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:textSize="@dimen/x32"
@@ -81,6 +82,7 @@
                 android:layout_height="match_parent"
                 android:background="#b39c7a"/>
             <com.flowerbell.gejigeji.widget.StrokeTextView
+                android:id="@+id/tv_withdraw"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:gravity="center"

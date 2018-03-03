@@ -7,6 +7,7 @@ import com.flowerbell.gejigeji.R
 import com.flowerbell.gejigeji.comm.BaseFragment
 import com.flowerbell.gejigeji.modules.my.MyInfoActivity
 import com.flowerbell.gejigeji.modules.my.MyWalletActivity
+import com.flowerbell.gejigeji.modules.my.RechargeActivity
 import kotlinx.android.synthetic.main.fragment_my.*
 
 
@@ -28,6 +29,7 @@ class MyFragment : BaseFragment(), View.OnClickListener {
     override fun initView() {
         iv_header.setOnClickListener(this)
         tv_wallet.setOnClickListener(this)
+        tv_recharge.setOnClickListener(this)
     }
 
 
@@ -41,6 +43,10 @@ class MyFragment : BaseFragment(), View.OnClickListener {
             R.id.tv_wallet->{
                 //钱包
                 ActivityDelegate.create(MyWalletActivity::class.java).open(context)
+            }
+            R.id.tv_recharge->{
+                //充值
+                ActivityDelegate.create(RechargeActivity::class.java).open(context)
             }
         }
     }
