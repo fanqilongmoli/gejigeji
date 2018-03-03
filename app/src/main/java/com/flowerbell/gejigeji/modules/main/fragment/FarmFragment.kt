@@ -7,6 +7,8 @@ import com.flowerbell.gejigeji.R
 import com.flowerbell.gejigeji.comm.BaseFragment
 import com.flowerbell.gejigeji.modules.farm.MessageActivity
 import com.flowerbell.gejigeji.widget.FarmTitle
+import com.flowerbell.gejigeji.widget.FarmView
+import com.flowerbell.gejigeji.widget.dialog.FeedChickenDialog
 import com.flowerbell.gejigeji.widget.dialog.GoToStoreDialog
 import com.flowerbell.gejigeji.widget.dialog.TrusteeshipDialog
 import kotlinx.android.synthetic.main.fragment_farm.*
@@ -41,6 +43,14 @@ class FarmFragment : BaseFragment() {
 
             override fun cinemaClick() {
                 ToastUtil.showShort(context, "相机点击")
+            }
+
+        })
+
+        farmView.setFeedListener(object :FarmView.FeedListener{
+            override fun feedClick() {
+                val feedChickenDialog = FeedChickenDialog(context)
+                feedChickenDialog.show()
             }
 
         })
