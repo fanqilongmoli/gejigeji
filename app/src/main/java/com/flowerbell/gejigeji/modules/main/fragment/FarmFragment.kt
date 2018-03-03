@@ -8,6 +8,7 @@ import com.flowerbell.gejigeji.comm.BaseFragment
 import com.flowerbell.gejigeji.modules.farm.MessageActivity
 import com.flowerbell.gejigeji.widget.FarmTitle
 import com.flowerbell.gejigeji.widget.dialog.GoToStoreDialog
+import com.flowerbell.gejigeji.widget.dialog.TrusteeshipDialog
 import kotlinx.android.synthetic.main.fragment_farm.*
 
 
@@ -34,7 +35,8 @@ class FarmFragment : BaseFragment() {
             }
 
             override fun autoClick() {
-                ToastUtil.showShort(context, "自动点击")
+                val trusteeshipDialog = TrusteeshipDialog(context)
+                trusteeshipDialog.show()
             }
 
             override fun cinemaClick() {
