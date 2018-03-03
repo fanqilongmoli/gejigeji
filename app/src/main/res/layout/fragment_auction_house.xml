@@ -1,9 +1,126 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/y40"
+    android:paddingLeft="@dimen/x50"
+    android:paddingRight="@dimen/x50"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
     tools:context="com.flowerbell.gejigeji.modules.exchange.AuctionHouseFragment">
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
+        <RelativeLayout
+            android:id="@+id/rl_buy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/buy_bg">
 
-</FrameLayout>
+            <com.flowerbell.gejigeji.widget.StrokeTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/hylxjt"
+                android:text="购买"
+                android:textSize="@dimen/x32"
+                app:StrokeTextViewHasBorder="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_auction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/auction_bg_pre">
+
+            <com.flowerbell.gejigeji.widget.StrokeTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/hylxjt"
+                android:text="拍卖"
+                android:textSize="@dimen/x32"
+                app:StrokeTextViewHasBorder="true" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y780"
+        android:orientation="vertical"
+        android:background="@drawable/auction_comm_bg">
+        <com.flowerbell.gejigeji.widget.StrokeTextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y68"
+            android:gravity="center"
+            android:fontFamily="@font/hylxjt"
+            android:textSize="@dimen/x30"
+            android:text="商品列表"/>
+        <View
+            android:layout_marginLeft="@dimen/x16"
+            android:layout_marginRight="@dimen/x16"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#975f31"/>
+        <LinearLayout
+            android:layout_marginLeft="@dimen/x16"
+            android:layout_marginRight="@dimen/x16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.flowerbell.gejigeji.widget.StrokeTextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_height="@dimen/y42"
+                android:textColor="@color/color_7b492a"
+                android:fontFamily="@font/hylxjt"
+                android:text="名称"/>
+            <com.flowerbell.gejigeji.widget.StrokeTextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_height="@dimen/y42"
+                android:textColor="@color/color_7b492a"
+                android:fontFamily="@font/hylxjt"
+                android:text="剩余"/>
+            <com.flowerbell.gejigeji.widget.StrokeTextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_height="@dimen/y42"
+                android:textColor="@color/color_7b492a"
+                android:fontFamily="@font/hylxjt"
+                android:text="单价"/>
+            <com.flowerbell.gejigeji.widget.StrokeTextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_height="@dimen/y42"
+                android:textColor="@color/color_7b492a"
+                android:fontFamily="@font/hylxjt"
+                android:text="操作"/>
+        </LinearLayout>
+        <View
+            android:layout_marginLeft="@dimen/x16"
+            android:layout_marginRight="@dimen/x16"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#975f31"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView_buy"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView_auction"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>
