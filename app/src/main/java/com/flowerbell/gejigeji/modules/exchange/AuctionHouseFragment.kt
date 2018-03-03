@@ -11,6 +11,7 @@ import com.flowerbell.gejigeji.comm.BaseFragment
 import com.flowerbell.gejigeji.modules.exchange.adapter.AuctionAdapter
 import com.flowerbell.gejigeji.modules.exchange.adapter.BuyAdapter
 import com.flowerbell.gejigeji.modules.main.fragment.ExchangeFragment
+import com.flowerbell.gejigeji.widget.dialog.RecoveryDialog
 import kotlinx.android.synthetic.main.fragment_auction_house.*
 
 
@@ -54,6 +55,8 @@ class AuctionHouseFragment : BaseFragment(), View.OnClickListener {
 
         rl_auction.setOnClickListener(this)
         rl_buy.setOnClickListener(this)
+        tv_shangjia.setOnClickListener(this)
+        tv_huishou.setOnClickListener(this)
     }
 
 
@@ -74,6 +77,14 @@ class AuctionHouseFragment : BaseFragment(), View.OnClickListener {
 
                 recyclerView_buy.visibility = View.GONE
                 recyclerView_auction.visibility = View.VISIBLE
+            }
+            R.id.tv_shangjia->{
+                //上架
+            }
+            R.id.tv_huishou->{
+                //回收
+                val recoveryDialog = RecoveryDialog(context)
+                recoveryDialog.show()
             }
 
 
