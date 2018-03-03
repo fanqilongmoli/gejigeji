@@ -2,8 +2,10 @@ package com.flowerbell.gejigeji.modules.main.fragment
 
 
 import com.chuangxincheng.commlibrary.ToastUtil
+import com.chuangxincheng.commlibrary.app.ActivityDelegate
 import com.flowerbell.gejigeji.R
 import com.flowerbell.gejigeji.comm.BaseFragment
+import com.flowerbell.gejigeji.modules.farm.MessageActivity
 import com.flowerbell.gejigeji.widget.FarmTitle
 import com.flowerbell.gejigeji.widget.dialog.GoToStoreDialog
 import kotlinx.android.synthetic.main.fragment_farm.*
@@ -28,7 +30,7 @@ class FarmFragment : BaseFragment() {
 
         farmTitle.setFarmTitleListener(object :FarmTitle.FarmTitleListener{
             override fun messageClick() {
-                ToastUtil.showShort(context, "消息点击")
+                ActivityDelegate.create(MessageActivity::class.java).open(context)
             }
 
             override fun autoClick() {
