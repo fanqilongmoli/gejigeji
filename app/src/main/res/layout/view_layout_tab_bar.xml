@@ -26,6 +26,7 @@
             android:layout_height="wrap_content"
             android:textSize="@dimen/x20"
             android:fontFamily="@font/hylxjt"
+            android:textColor="@color/color_7b492a"
             android:text="农场"/>
     </RelativeLayout>
     <RelativeLayout
@@ -47,7 +48,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="@dimen/x20"
-
+            android:textColor="@color/color_7b492a"
             android:fontFamily="@font/hylxjt"
             android:text="交易所"/>
     </RelativeLayout>
@@ -70,6 +71,7 @@
             app:StrokeTextViewHasBorder="true"
             android:layout_height="wrap_content"
             android:textSize="@dimen/x20"
+            android:textColor="@color/color_7b492a"
             android:fontFamily="@font/hylxjt"
             android:text="我的"/>
     </RelativeLayout>

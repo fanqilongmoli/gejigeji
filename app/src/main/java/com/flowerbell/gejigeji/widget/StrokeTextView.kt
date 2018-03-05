@@ -2,23 +2,19 @@ package com.flowerbell.gejigeji.widget
 
 import android.content.Context
 import android.graphics.Canvas
-import android.graphics.Color
 import android.graphics.Paint
 import android.graphics.Typeface
-import android.text.TextPaint
 import android.util.AttributeSet
 import android.view.ViewGroup
 import android.widget.TextView
 
 import com.flowerbell.gejigeji.R
 
-import java.lang.reflect.Field
-
 /**
  * Created by MIT on 2018/2/3.
  */
 
-class StrokeTextView @JvmOverloads constructor(private val mContext: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : android.support.v7.widget.AppCompatTextView(mContext, attrs, defStyleAttr) {
+class StrokeTextView (context: Context?, attrs: AttributeSet?) : android.support.v7.widget.AppCompatTextView(context, attrs) {
 
     //private var mTextPaint: TextPaint
     private var mInnerColor: Int
@@ -27,16 +23,21 @@ class StrokeTextView @JvmOverloads constructor(private val mContext: Context, at
     private var outlineTextView: TextView? = null
     private var mStrokeWidth: Float
 
+    // fongUrl是自定义字体分类的名称
+    private val fontUrl = "fonts/hylxjt.ttf"
+    //Typeface是字体，这里我们创建一个对象
+    private var tf: Typeface? = null
+
     init {
 
-        val array = mContext.obtainStyledAttributes(attrs, R.styleable.StrokeTextView)
+        val array = context!!.obtainStyledAttributes(attrs, R.styleable.StrokeTextView)
         mHasBorder = array.getBoolean(R.styleable.StrokeTextView_StrokeTextViewHasBorder, false)
-        mInnerColor = array.getColor(R.styleable.StrokeTextView_StrokeTextViewInnerColor, mContext.resources.getColor(R.color.color_fff))
-        mOuterColor = array.getColor(R.styleable.StrokeTextView_StrokeTextViewOuterColor, mContext.resources.getColor(R.color.color_7b492a))
+        mInnerColor = array.getColor(R.styleable.StrokeTextView_StrokeTextViewInnerColor, context.resources.getColor(R.color.color_fff))
+        mOuterColor = array.getColor(R.styleable.StrokeTextView_StrokeTextViewOuterColor, context.resources.getColor(R.color.color_7b492a))
         mStrokeWidth = array.getDimension(R.styleable.StrokeTextView_StrokeTextViewStroke, 4f)
         array.recycle()
-        outlineTextView = TextView(mContext, attrs)
-
+        outlineTextView = TextView(context, attrs)
+        tf = Typeface.createFromAsset(context.assets,fontUrl)
         initView()
     }
 
@@ -46,7 +47,7 @@ class StrokeTextView @JvmOverloads constructor(private val mContext: Context, at
         paint.strokeWidth = mStrokeWidth// 描边宽度
         paint.style = Paint.Style.STROKE
         if (mHasBorder) {
-            outlineTextView!!.typeface = Typeface.createFromAsset(mContext.assets, "hylxjt.ttf")
+            outlineTextView!!.typeface = tf
             outlineTextView!!.setTextColor(mOuterColor)// 描边颜色
             outlineTextView!!.gravity = gravity
         }
