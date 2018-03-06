@@ -7,19 +7,10 @@
     android:orientation="vertical"
     android:background="@drawable/none_bg"
     tools:context="com.flowerbell.gejigeji.modules.my.AddressManageActivity">
-    <com.flowerbell.gejigeji.widget.StrokeTextView
-        android:id="@+id/tv_store"
-        android:layout_width="wrap_content"
+    <com.flowerbell.gejigeji.widget.CommTitleBar
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="@dimen/y70"
-        android:fontFamily="@font/hylxjt"
-        android:text="地址管理"
-        android:textSize="@dimen/x32"
-        app:StrokeTextViewHasBorder="true"
-        app:StrokeTextViewInnerColor="@color/color_fdd329"
-        app:StrokeTextViewOuterColor="@color/color_7b492a"
-        app:StrokeTextViewStroke="8px" />
+        app:CommTitleBarTitle="地址管理"/>
     <android.support.v7.widget.RecyclerView
         android:layout_marginTop="@dimen/y60"
         android:id="@+id/recyclerView"

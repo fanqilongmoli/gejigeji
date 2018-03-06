@@ -7,19 +7,10 @@
     android:background="@drawable/none_bg"
     android:orientation="vertical"
     tools:context="com.flowerbell.gejigeji.modules.my.MyInfoActivity">
-    <com.flowerbell.gejigeji.widget.StrokeTextView
-        android:id="@+id/tv_store"
-        android:layout_width="wrap_content"
+    <com.flowerbell.gejigeji.widget.CommTitleBar
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="@dimen/y70"
-        android:fontFamily="@font/hylxjt"
-        android:text="个人信息"
-        android:textSize="@dimen/x32"
-        app:StrokeTextViewHasBorder="true"
-        app:StrokeTextViewInnerColor="@color/color_fdd329"
-        app:StrokeTextViewOuterColor="@color/color_7b492a"
-        app:StrokeTextViewStroke="8px" />
+        app:CommTitleBarTitle="个人信息"/>
     <ImageView
         android:layout_width="@dimen/x150"
         android:layout_height="@dimen/x150"

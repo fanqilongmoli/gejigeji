@@ -6,4 +6,8 @@
         <attr name="StrokeTextViewOuterColor" format="color"/>
         <attr name="StrokeTextViewStroke" format="dimension"/>
     </declare-styleable>
+
+    <declare-styleable name="CommTitleBar">
+        <attr name="CommTitleBarTitle" format="string"/>
+    </declare-styleable>
 </resources>
