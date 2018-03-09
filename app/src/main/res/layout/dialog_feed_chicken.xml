@@ -1,74 +1,205 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llRoot"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:id="@+id/llRoot"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/window_img"
     android:orientation="vertical">
 
     <TextView
-        android:layout_gravity="center_horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/x30"
+        android:layout_gravity="center_horizontal"
+        android:text="喂食"
         android:textColor="@color/color_7b492a"
-        android:text="喂食"/>
+        android:textSize="@dimen/x30" />
 
     <View
-        android:layout_marginTop="@dimen/y20"
         android:layout_width="match_parent"
         android:layout_height="1px"
-        android:background="#bb9977"/>
+        android:layout_marginTop="@dimen/y20"
+        android:background="#bb9977" />
+
     <ImageView
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="@dimen/y20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/food_ic"/>
-    <View
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="@dimen/y20"
+        android:src="@drawable/food_ic" />
+
+    <View
         android:layout_width="match_parent"
         android:layout_height="1px"
-        android:background="#bb9977"/>
-    <TextView
         android:layout_marginTop="@dimen/y20"
-        android:layout_gravity="center_horizontal"
+        android:background="#bb9977" />
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/x30"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/y20"
+        android:text="你的粮仓"
         android:textColor="@color/color_7b492a"
-        android:text="你的粮仓"/>
+        android:textSize="@dimen/x30" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <ImageView
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/x5"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_dami"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/rice_ic"/>
-            <TextView
+                android:layout_centerHorizontal="true"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/y20"
+                android:paddingLeft="@dimen/x10"
+                android:paddingRight="@dimen/x10"
+                android:paddingTop="@dimen/y20">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/rice_ic" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/y10"
+                    android:text="大米"
+                    android:textColor="@color/color_7b492a" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x5"
+            android:layout_marginRight="@dimen/x5"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_xiaomi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="大米"
-                android:layout_marginTop="@dimen/y10"
-                android:textColor="@color/color_7b492a"/>
-        </LinearLayout>
+                android:layout_centerHorizontal="true"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/y20"
+                android:paddingLeft="@dimen/x10"
+                android:paddingRight="@dimen/x10"
+                android:paddingTop="@dimen/y20">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/millet_ic" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/y10"
+                    android:text="小米"
+                    android:textColor="@color/color_7b492a" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x5"
+            android:layout_marginRight="@dimen/x5"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:id="@+id/ll_xiaomai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/y20"
+                android:paddingLeft="@dimen/x10"
+                android:paddingRight="@dimen/x10"
+                android:paddingTop="@dimen/y20">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/wheat_ic" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/y10"
+                    android:text="小麦"
+                    android:textColor="@color/color_7b492a" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x5"
+            android:layout_marginRight="@dimen/x5"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:id="@+id/ll_daogu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/y20"
+                android:paddingLeft="@dimen/x10"
+                android:paddingRight="@dimen/x10"
+                android:paddingTop="@dimen/y20">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/paddy_ic" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/y10"
+                    android:text="稻谷"
+                    android:textColor="@color/color_7b492a" />
+            </LinearLayout>
+        </RelativeLayout>
+
 
     </LinearLayout>
+
     <TextView
         android:id="@+id/tv_feed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="@dimen/y30"
-        android:layout_width="wrap_content"
-        android:gravity="center"
-        android:textSize="@dimen/x24"
-        android:textColor="@color/color_fff"
-        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/y20"
         android:background="@drawable/button_bg"
-        android:text="确认喂食"/>
+        android:gravity="center"
+        android:text="确认喂食"
+        android:textColor="@color/color_fff"
+        android:textSize="@dimen/x24" />
 </LinearLayout>

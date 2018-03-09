@@ -3,8 +3,10 @@ package com.flowerbell.gejigeji.modules.main.fragment
 
 import com.chuangxincheng.commlibrary.ToastUtil
 import com.chuangxincheng.commlibrary.app.ActivityDelegate
+import com.chuangxincheng.commlibrary.log.LogUtil
 import com.flowerbell.gejigeji.R
 import com.flowerbell.gejigeji.comm.BaseFragment
+import com.flowerbell.gejigeji.comm.network.OnModel
 import com.flowerbell.gejigeji.modules.farm.MessageActivity
 import com.flowerbell.gejigeji.widget.FarmTitle
 import com.flowerbell.gejigeji.widget.FarmView
@@ -22,6 +24,10 @@ class FarmFragment : BaseFragment() {
         fun getInstance(): FarmFragment {
             return FarmFragment()
         }
+    }
+
+    private val onModel by lazy {
+        OnModel()
     }
 
     override fun getLayoutId(): Int {
@@ -46,14 +52,28 @@ class FarmFragment : BaseFragment() {
             }
 
         })
-
+        //喂食点击
         farmView.setFeedListener(object :FarmView.FeedListener{
             override fun feedClick() {
                 val feedChickenDialog = FeedChickenDialog(context)
+                feedChickenDialog.setFeedListener(object :FeedChickenDialog.FeedChickenDialogListener{
+                    override fun feedClick() {
+                        //=======
+                        var subscribe = onModel.on().subscribe({
+                            issue ->
+                            LogUtil.d(issue.toString())
+                        },{
+                            throwable ->
+                            LogUtil.d(throwable.message)
+                        })
+                    }
+                })
                 feedChickenDialog.show()
             }
 
         })
+
+
     }
 
 

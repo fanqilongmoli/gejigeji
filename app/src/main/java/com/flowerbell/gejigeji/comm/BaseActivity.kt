@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
+//import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper
 
 /**
  * Created by MIT on 2018/2/6.
@@ -56,6 +57,10 @@ abstract class BaseActivity : AppCompatActivity() {
         val imm = mContext.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         imm.hideSoftInputFromWindow(mEditText.windowToken, 0)
     }
+
+//    override fun attachBaseContext(newBase: Context?) {
+//        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase))
+//    }
 
 
 }

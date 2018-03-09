@@ -1,6 +1,7 @@
 package com.flowerbell.gejigeji.modules.my
 
 import android.support.v7.widget.LinearLayoutManager
+import com.chuangxincheng.commlibrary.sys.StatusBarUtil
 import com.flowerbell.gejigeji.R
 import com.flowerbell.gejigeji.comm.BaseActivity
 import com.flowerbell.gejigeji.modules.my.adapter.AddressAdapter
@@ -18,6 +19,8 @@ class AddressManageActivity : BaseActivity() {
     }
 
     override fun initView() {
+        StatusBarUtil.immersive(this)
+
         addressAdapter = AddressAdapter(recyclerView,R.layout.item_address)
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = addressAdapter
@@ -25,7 +28,7 @@ class AddressManageActivity : BaseActivity() {
 
     override fun initData() {
 
-        var temp:ArrayList<String> = ArrayList()
+        val temp:ArrayList<String> = ArrayList()
         temp.add("a")
         temp.add("a")
         temp.add("a")
